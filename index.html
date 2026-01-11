@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: system-ui, Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      background: #f2f2f2;
       margin: 0;
       padding: 0;
       display: flex;
@@ -20,36 +20,47 @@
       max-width: 420px;
       width: 90%;
       padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       text-align: center;
     }
     h2 {
       margin-top: 0;
+      font-size: 20px;
     }
     p {
-      color: #555;
+      color: #444;
       font-size: 15px;
+      line-height: 1.5;
+    }
+    .steps {
+      text-align: left;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #333;
+    }
+    .steps li {
+      margin-bottom: 8px;
     }
     a.button {
       display: block;
-      margin-top: 16px;
+      margin-top: 18px;
       padding: 14px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
     }
-    .mobile {
+    .primary {
       background: #0d6efd;
       color: white;
     }
-    .desktop {
+    .secondary {
       background: #198754;
       color: white;
     }
     .note {
-      margin-top: 16px;
+      margin-top: 14px;
       font-size: 13px;
       color: #777;
     }
@@ -58,20 +69,28 @@
 <body>
   <div class="card">
     <h2>Send Email</h2>
+
     <p>
-      Choose the option that matches your device.
+      If you are using Telegram on your phone, please follow these steps
+      to open your email app correctly.
     </p>
 
-    <!-- MOBILE EMAIL APP -->
-    <a class="button mobile"
+    <ol class="steps">
+      <li>Tap the <strong>⋮</strong> (three dots) in the top corner.</li>
+      <li>Select <strong>Open in Browser</strong>.</li>
+      <li>Then tap <strong>Open Email App</strong> below.</li>
+    </ol>
+
+    <!-- MAILTO (MOBILE) -->
+    <a class="button primary"
        href="mailto:media1@example.com,media2@example.com,media3@example.com
 ?subject=Urgent%3A%20Internet%20Shutdown%20in%20Iran
 &body=Dear%20Editor%2C%0A%0AThe%20Iranian%20government%20has%20once%20again%20shut%20down%20the%20internet%20to%20suppress%20public%20protests.%0A%0AWe%20urgently%20ask%20for%20your%20coverage%20and%20attention.%0A%0ABest%20regards">
-      📱 Open Email App (Mobile)
+      📱 Open Email App
     </a>
 
-    <!-- GMAIL WEB -->
-    <a class="button desktop"
+    <!-- DESKTOP -->
+    <a class="button secondary"
        href="https://mail.google.com/mail/?view=cm
 &to=media1@example.com,media2@example.com,media3@example.com
 &su=Urgent%3A%20Internet%20Shutdown%20in%20Iran
@@ -81,7 +100,7 @@
     </a>
 
     <div class="note">
-      If you have multiple email accounts, you can switch the sender inside your email app.
+      This step is required because Telegram opens links inside its own browser.
     </div>
   </div>
 </body>
