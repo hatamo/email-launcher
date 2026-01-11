@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Send Email</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f7f7f7;
+    }
+    .box {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    a.button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Send Email to Media</h2>
+    <p>Click the button below to open your email app with a prepared message.</p>
 
+    <a class="button"
+       href="mailto:media1@example.com,media2@example.com,media3@example.com?subject=Urgent%3A%20Internet%20Shutdown%20in%20Iran&body=Dear%20Editor%2C%0A%0AThe%20Iranian%20government%20has%20once%20again%20shut%20down%20the%20internet%20to%20suppress%20public%20protests.%0A%0AWe%20urgently%20ask%20for%20your%20coverage%20and%20attention.%0A%0ABest%20regards">
+      📧 Open Email App
+    </a>
+  </div>
+</body>
+</html>
