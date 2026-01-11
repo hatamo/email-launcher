@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>Send Email</title>
+  <title>ارسال ایمیل</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-      background: #f2f2f2;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f3f3f3;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      direction: rtl;
     }
     .card {
       background: white;
@@ -22,7 +23,7 @@
       padding: 24px;
       border-radius: 14px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-      text-align: center;
+      text-align: right;
     }
     h2 {
       margin-top: 0;
@@ -31,32 +32,24 @@
     p {
       color: #444;
       font-size: 15px;
-      line-height: 1.5;
-    }
-    .steps {
-      text-align: left;
-      margin-top: 16px;
-      font-size: 14px;
-      color: #333;
-    }
-    .steps li {
-      margin-bottom: 8px;
+      line-height: 1.7;
     }
     a.button {
       display: block;
-      margin-top: 18px;
+      margin-top: 16px;
       padding: 14px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
+      text-align: center;
     }
     .primary {
       background: #0d6efd;
       color: white;
     }
     .secondary {
-      background: #198754;
+      background: #6c757d;
       color: white;
     }
     .note {
@@ -68,39 +61,33 @@
 </head>
 <body>
   <div class="card">
-    <h2>Send Email</h2>
+    <h2>ارسال ایمیل به رسانه‌ها</h2>
 
     <p>
-      If you are using Telegram on your phone, please follow these steps
-      to open your email app correctly.
+      برای اینکه ایمیل شما بدون مشکل باز شود، از روش پیشنهادی زیر استفاده کنید.
     </p>
 
-    <ol class="steps">
-      <li>Tap the <strong>⋮</strong> (three dots) in the top corner.</li>
-      <li>Select <strong>Open in Browser</strong>.</li>
-      <li>Then tap <strong>Open Email App</strong> below.</li>
-    </ol>
-
-    <!-- MAILTO (MOBILE) -->
+    <!-- PRIMARY (WORKS EVERYWHERE) -->
     <a class="button primary"
-       href="mailto:media1@example.com,media2@example.com,media3@example.com
-?subject=Urgent%3A%20Internet%20Shutdown%20in%20Iran
-&body=Dear%20Editor%2C%0A%0AThe%20Iranian%20government%20has%20once%20again%20shut%20down%20the%20internet%20to%20suppress%20public%20protests.%0A%0AWe%20urgently%20ask%20for%20your%20coverage%20and%20attention.%0A%0ABest%20regards">
-      📱 Open Email App
-    </a>
-
-    <!-- DESKTOP -->
-    <a class="button secondary"
        href="https://mail.google.com/mail/?view=cm
 &to=media1@example.com,media2@example.com,media3@example.com
 &su=Urgent%3A%20Internet%20Shutdown%20in%20Iran
 &body=Dear%20Editor%2C%0A%0AThe%20Iranian%20government%20has%20once%20again%20shut%20down%20the%20internet%20to%20suppress%20public%20protests.%0A%0AWe%20urgently%20ask%20for%20your%20coverage%20and%20attention.%0A%0ABest%20regards"
        target="_blank">
-      💻 Open Gmail Web (Desktop)
+      ✅ ارسال ایمیل (روش پیشنهادی)
+    </a>
+
+    <!-- OPTIONAL -->
+    <a class="button secondary"
+       href="mailto:media1@example.com,media2@example.com,media3@example.com
+?subject=Urgent%3A%20Internet%20Shutdown%20in%20Iran
+&body=Dear%20Editor%2C%0A%0AThe%20Iranian%20government%20has%20once%20again%20shut%20down%20the%20internet%20to%20suppress%20public%20protests.%0A%0AWe%20urgently%20ask%20for%20your%20coverage%20and%20attention.%0A%0ABest%20regards">
+      📱 تلاش برای باز کردن اپ ایمیل
     </a>
 
     <div class="note">
-      This step is required because Telegram opens links inside its own browser.
+      اگر گزینه دوم روی گوشی شما باز نشد، طبیعی است.  
+      تلگرام روی موبایل بعضی لینک‌ها را محدود می‌کند.
     </div>
   </div>
 </body>
